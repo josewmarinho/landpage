@@ -1,0 +1,10 @@
+export { Hero } from './Hero';
+export { Stats } from './Stats';
+export { Results } from './Results';
+export { Timeline } from './Timeline';
+export { WhoIs } from './WhoIs';
+export { Proposals } from './Proposals';
+export { WhyEdinho } from './WhyEdinho';
+export { YourCity } from './YourCity';
+export { Participate } from './Participate';
+export { FinalCta } from './FinalCta';
