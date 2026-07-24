@@ -5,13 +5,13 @@ const TRAITS = ['Filho e neto de agricultores.', 'Homem de família e de fé.', 
 
 export function WhoIs() {
   return (
-    <section className="section-pad relative overflow-hidden bg-gradient-to-b from-ink to-ink-800">
-      <div className="pointer-events-none absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-gold/10 blur-[130px]" />
+    <section className="section-pad relative overflow-hidden bg-blue-gradient">
+      <div className="pointer-events-none absolute -left-20 top-1/3 h-80 w-80 rounded-full bg-yellow/10 blur-[130px]" />
       <div className="container-x relative grid gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <Reveal>
             <span className="eyebrow">
-              <span className="h-px w-6 bg-gold" />
+              <span className="h-px w-6 bg-green-500" />
               Quem é Edinho
             </span>
           </Reveal>
@@ -25,7 +25,7 @@ export function WhoIs() {
             <ul className="mt-8 space-y-3">
               {TRAITS.map((t) => (
                 <li key={t} className="flex items-center gap-3 text-lg text-white/80">
-                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-gold/15 text-gold">✦</span>
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-yellow/15 text-yellow-400">✦</span>
                   {t}
                 </li>
               ))}
@@ -48,9 +48,9 @@ export function WhoIs() {
               {VALUES.map((v, i) => (
                 <div
                   key={v}
-                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-colors hover:border-gold/40"
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.05] p-7 transition-colors hover:border-yellow/50"
                 >
-                  <span className="font-display text-5xl text-white/10 transition-colors group-hover:text-gold/20">
+                  <span className="font-display text-5xl text-white/15 transition-colors group-hover:text-yellow/30">
                     0{i + 1}
                   </span>
                   <p className="mt-2 font-display text-2xl uppercase text-gradient-gold">{v}</p>
@@ -60,7 +60,10 @@ export function WhoIs() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <blockquote className="mt-8 rounded-3xl border-l-4 border-gold bg-white/[0.03] p-7 text-xl font-bold leading-snug text-white">
+            <blockquote className="mt-8 rounded-3xl border border-white/10 bg-white/[0.05] p-7 text-xl font-bold leading-snug text-white">
+              <span className="mb-1 block font-display text-5xl leading-[0.6] text-yellow-400" aria-hidden="true">
+                &ldquo;
+              </span>
               Porque o interesse das pessoas precisa estar acima das disputas políticas.
             </blockquote>
           </Reveal>

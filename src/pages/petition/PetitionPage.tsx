@@ -38,7 +38,7 @@ export function PetitionPage() {
             <div>
               <Reveal>
                 <span className="eyebrow">
-                  <span className="h-px w-6 bg-gold" />
+                  <span className="h-px w-6 bg-green-500" />
                   {PETITION_HERO.eyebrow} · Saúde
                 </span>
               </Reveal>
@@ -77,33 +77,33 @@ export function PetitionPage() {
         </section>
 
         {/* O QUE DEFENDEMOS */}
-        <section className="section-pad bg-cream text-ink">
+        <section className="section-pad bg-white text-ink">
           <div className="container-x">
             <SectionHeading
               tone="dark"
               eyebrow="O que estamos defendendo"
               title={
                 <>
-                  Mais recursos federais <span className="text-gradient-gold">para:</span>
+                  Mais recursos federais <span className="text-em-green">para:</span>
                 </>
               }
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {DEFEND_ITEMS.map((item, i) => (
                 <Reveal key={item.title} delay={i * 0.06}>
-                  <article className="flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-gradient text-ink shadow-gold">
+                  <article className="flex h-full flex-col rounded-3xl border border-navy/10 bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-yellow/60">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold-gradient text-navy shadow-gold">
                       <DefendIcon name={item.icon} />
                     </span>
-                    <h3 className="mt-5 text-lg font-extrabold uppercase tracking-wide text-ink">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-ink/65">{item.body}</p>
+                    <h3 className="mt-5 text-lg font-extrabold uppercase tracking-wide text-navy">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-navy/65">{item.body}</p>
                   </article>
                 </Reveal>
               ))}
             </div>
             <Reveal delay={0.1} className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-              <p className="display text-3xl text-ink sm:text-4xl">
-                Saúde <span className="text-gradient-gold">não pode esperar.</span>
+              <p className="display text-3xl text-navy sm:text-4xl">
+                Saúde <span className="text-em-green">não pode esperar.</span>
               </p>
               <Button href="#assinar" external={false} variant="dark" size="lg">
                 Assine agora
@@ -113,19 +113,20 @@ export function PetitionPage() {
         </section>
 
         {/* EDINHO E A SAÚDE */}
-        <section className="section-pad relative overflow-hidden bg-ink">
-          <div className="pointer-events-none absolute -left-20 top-1/4 h-80 w-80 rounded-full bg-gold/10 blur-[130px]" />
+        <section className="section-pad relative overflow-hidden bg-sky">
+          <div className="pointer-events-none absolute -left-20 top-1/4 h-80 w-80 rounded-full bg-yellow/10 blur-[130px]" />
           <div className="container-x relative grid gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
               <SectionHeading
+                tone="dark"
                 eyebrow="Trajetória"
                 title={
                   <>
-                    Edinho já mostrou que saúde <span className="text-gradient-gold">é prioridade.</span>
+                    Edinho já mostrou que saúde <span className="text-em-green">é prioridade.</span>
                   </>
                 }
               />
-              <div className="mt-8 space-y-4 text-white/70">
+              <div className="mt-8 space-y-4 text-navy/70">
                 {EDINHO_HEALTH.paragraphs.map((p) => (
                   <Reveal key={p}>
                     <p className="leading-relaxed">{p}</p>
@@ -133,7 +134,7 @@ export function PetitionPage() {
                 ))}
               </div>
               <Reveal delay={0.1}>
-                <p className="mt-6 rounded-2xl border-l-4 border-gold bg-white/[0.03] p-5 text-sm italic leading-relaxed text-white/70">
+                <p className="mt-6 rounded-2xl border border-navy/10 bg-white p-5 text-sm italic leading-relaxed text-navy/70 shadow-card">
                   {EDINHO_HEALTH.note}
                 </p>
               </Reveal>
@@ -141,19 +142,19 @@ export function PetitionPage() {
 
             <div className="flex flex-col justify-center">
               <Reveal>
-                <h3 className="text-sm font-bold uppercase tracking-[0.24em] text-gold-400">Compromissos</h3>
+                <h3 className="text-sm font-bold uppercase tracking-[0.24em] text-green-600">Compromissos</h3>
                 <ul className="mt-6 space-y-4">
                   {EDINHO_HEALTH.commitments.map((c) => (
-                    <li key={c} className="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                      <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-gold/15 text-gold">✓</span>
-                      <span className="font-semibold text-white/85">{c}</span>
+                    <li key={c} className="flex items-start gap-4 rounded-2xl border border-navy/10 bg-white p-5 shadow-card">
+                      <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-green/15 text-green-600">✓</span>
+                      <span className="font-semibold text-navy/85">{c}</span>
                     </li>
                   ))}
                 </ul>
               </Reveal>
               <Reveal delay={0.1}>
-                <p className="display mt-8 text-2xl text-white sm:text-3xl">
-                  Quem já fez, <span className="text-gradient-gold">sabe como fazer mais.</span>
+                <p className="display mt-8 text-2xl text-navy sm:text-3xl">
+                  Quem já fez, <span className="text-em-green">sabe como fazer mais.</span>
                 </p>
               </Reveal>
             </div>
@@ -161,26 +162,27 @@ export function PetitionPage() {
         </section>
 
         {/* ASSINAR */}
-        <section id="assinar" className="section-pad relative overflow-hidden bg-ink-800 scroll-mt-20">
-          <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-gold/10 blur-[140px]" />
+        <section id="assinar" className="section-pad relative overflow-hidden bg-white scroll-mt-20">
+          <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-yellow/10 blur-[140px]" />
           <div className="container-x relative grid gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
             <div>
               <SectionHeading
+                tone="dark"
                 eyebrow="Nossa saúde é regional"
                 title={
                   <>
-                    Nossa saúde é regional. <span className="text-gradient-gold">Os recursos também precisam ser.</span>
+                    Nossa saúde é regional. <span className="text-em-green">Os recursos também precisam ser.</span>
                   </>
                 }
               />
               <Reveal delay={0.1}>
-                <p className="mt-6 max-w-md leading-relaxed text-white/65">
+                <p className="mt-6 max-w-md leading-relaxed text-navy/65">
                   Hospitais de Rio Preto atendem pacientes de todo o Noroeste Paulista. Por isso, esta não é uma
                   reivindicação de uma única cidade. É uma causa de toda a região.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>
-                <p className="mt-6 max-w-md font-semibold text-white/85">
+                <p className="mt-6 max-w-md font-semibold text-navy/85">
                   Queremos mostrar a Brasília que o Interior precisa ser tratado como prioridade. Assine por mais recursos
                   federais para a nossa saúde.
                 </p>

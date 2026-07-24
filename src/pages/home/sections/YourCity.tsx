@@ -6,14 +6,14 @@ export function YourCity() {
   const form = useLeadForm({ waIntro: 'Olá! Quero contar sobre a minha cidade para o Edinho.' });
 
   return (
-    <section id="sua-cidade" className="section-pad relative overflow-hidden bg-ink-800">
-      <div className="pointer-events-none absolute -right-20 top-10 h-96 w-96 rounded-full bg-gold/10 blur-[130px]" />
+    <section id="sua-cidade" className="section-pad relative overflow-hidden bg-blue-gradient">
+      <div className="pointer-events-none absolute -right-20 top-10 h-96 w-96 rounded-full bg-yellow/10 blur-[130px]" />
       <div className="container-x relative grid gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
         {/* Texto */}
         <div>
           <Reveal>
             <span className="eyebrow">
-              <span className="h-px w-6 bg-gold" />
+              <span className="h-px w-6 bg-green-500" />
               Na sua cidade
             </span>
           </Reveal>
@@ -67,7 +67,7 @@ export function YourCity() {
                 />
                 <Field label="Nome" value={form.state.name} onChange={(v) => form.setField('name', v)} placeholder="Seu nome" />
                 <Field label="WhatsApp" value={form.state.whatsapp} onChange={(v) => form.setField('whatsapp', v)} placeholder="(00) 00000-0000" inputMode="tel" />
-                {form.error && <p className="text-sm font-semibold text-ember">{form.error}</p>}
+                {form.error && <p className="text-sm font-semibold text-yellow-400">{form.error}</p>}
                 <Button type="submit" size="lg" className="w-full">
                   Enviar para Edinho
                 </Button>

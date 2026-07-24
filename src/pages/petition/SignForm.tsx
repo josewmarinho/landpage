@@ -79,7 +79,7 @@ export function SignForm() {
             </CheckLine>
           </div>
 
-          {form.error && <p className="text-sm font-semibold text-ember">{form.error}</p>}
+          {form.error && <p className="text-sm font-semibold text-yellow-400">{form.error}</p>}
 
           <Button type="submit" size="lg" className="w-full">
             Assinar o abaixo-assinado

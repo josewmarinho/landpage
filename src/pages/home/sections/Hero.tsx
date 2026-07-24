@@ -15,7 +15,7 @@ export function Hero() {
     <section id="inicio" className="relative overflow-hidden bg-ink-radial pt-28 pb-16 sm:pt-32 md:pt-36">
       {/* brilho de fundo */}
       <div className="pointer-events-none absolute -top-40 right-0 h-[560px] w-[560px] rounded-full bg-gold/20 blur-[130px]" />
-      <div className="pointer-events-none absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-ember/10 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/4 h-72 w-72 rounded-full bg-green/15 blur-[120px]" />
 
       <div className="container-x relative grid items-center gap-10 px-5 lg:grid-cols-[1.05fr_0.95fr] lg:px-12">
         {/* Coluna texto */}

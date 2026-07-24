@@ -12,20 +12,21 @@ export function Participate() {
   });
 
   return (
-    <section id="faca-parte" className="section-pad relative overflow-hidden bg-ink">
-      <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-gold/10 blur-[140px]" />
+    <section id="faca-parte" className="section-pad relative overflow-hidden bg-sky">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-yellow/10 blur-[140px]" />
       <div className="container-x relative">
         <SectionHeading
           align="center"
+          tone="dark"
           eyebrow="Faça parte"
           title={
             <>
-              Essa história continua <span className="text-gradient-gold">com você.</span>
+              Essa história continua <span className="text-em-green">com você.</span>
             </>
           }
         />
         <Reveal delay={0.05}>
-          <p className="mx-auto mt-5 max-w-xl text-center text-white/60">Escolha como quer participar:</p>
+          <p className="mx-auto mt-5 max-w-xl text-center text-navy/65">Escolha como quer participar:</p>
         </Reveal>
 
         <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-[1fr_1fr]">
@@ -33,11 +34,11 @@ export function Participate() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
             {PARTICIPATE_OPTIONS.map((opt, i) => (
               <Reveal key={opt.title} delay={i * 0.06}>
-                <div className="flex h-full items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="flex h-full items-start gap-4 rounded-2xl border border-navy/10 bg-white p-5 shadow-card">
                   <span className="text-2xl">{opt.emoji}</span>
                   <div>
-                    <h3 className="font-extrabold uppercase tracking-wide text-white">{opt.title}</h3>
-                    <p className="mt-1 text-sm text-white/55">{opt.desc}</p>
+                    <h3 className="font-extrabold uppercase tracking-wide text-navy">{opt.title}</h3>
+                    <p className="mt-1 text-sm text-navy/60">{opt.desc}</p>
                   </div>
                 </div>
               </Reveal>
@@ -46,7 +47,7 @@ export function Participate() {
 
           {/* Formulário */}
           <Reveal delay={0.1}>
-            <div className="rounded-3xl border border-white/10 bg-ink-800 p-7 shadow-card sm:p-8">
+            <div className="rounded-3xl border border-white/10 bg-ink p-7 shadow-blue sm:p-8">
               {form.submitted ? (
                 <FormSuccess
                   title="Bem-vindo à campanha!"
@@ -68,7 +69,7 @@ export function Participate() {
                     </div>
                   </div>
 
-                  {form.error && <p className="text-sm font-semibold text-ember">{form.error}</p>}
+                  {form.error && <p className="text-sm font-semibold text-yellow-400">{form.error}</p>}
 
                   <Button type="submit" size="lg" className="w-full">
                     Quero fazer parte

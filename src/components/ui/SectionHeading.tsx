@@ -17,7 +17,7 @@ export function SectionHeading({ eyebrow, title, align = 'left', tone = 'light',
       {eyebrow && (
         <Reveal>
           <span className={`eyebrow ${align === 'center' ? 'justify-center' : ''}`}>
-            <span className="h-px w-6 bg-gold" />
+            <span className="h-px w-6 bg-green-500" />
             {eyebrow}
           </span>
         </Reveal>

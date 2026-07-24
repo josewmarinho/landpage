@@ -4,34 +4,65 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Marca — dourado/laranja do Edinho
-        gold: {
-          DEFAULT: '#F5A800',
-          400: '#FFC13B',
-          500: '#F5A800',
-          600: '#E08A00',
-          700: '#C26F00',
+        // Marca — paleta da campanha (bandeira): azul-marinho, amarelo, verde.
+        navy: {
+          DEFAULT: '#173A8F',
+          950: '#0C1E4C',
+          900: '#102A66',
+          800: '#16368A',
+          700: '#20489F',
+          600: '#2B57B4',
+          300: '#7C97D6',
+          100: '#E7EDF9',
         },
-        ember: '#E8721C',
+        yellow: {
+          DEFAULT: '#FDB913',
+          300: '#FFD35A',
+          400: '#FFC53C',
+          500: '#FDB913',
+          600: '#E6A200',
+          700: '#C68700',
+        },
+        green: {
+          DEFAULT: '#2E9E3F',
+          400: '#4CB85E',
+          500: '#2E9E3F',
+          600: '#237E31',
+        },
+        // "ink" = azul-marinho profundo (texto sobre claro + seções escuras).
         ink: {
-          DEFAULT: '#0B0B0C',
-          800: '#141416',
-          700: '#1E1E22',
-          600: '#2A2A30',
+          DEFAULT: '#0E1F45',
+          800: '#16368A',
+          700: '#20489F',
+          600: '#2B57B4',
         },
-        cream: '#FBF8F1',
+        sky: '#EEF3FB',
+        cream: '#F6F8FC',
+        danger: '#D93A3A',
+        // Aliases de compatibilidade (mapeados para a nova paleta da campanha).
+        gold: {
+          DEFAULT: '#FDB913',
+          300: '#FFD35A',
+          400: '#FFC53C',
+          500: '#FDB913',
+          600: '#E6A200',
+          700: '#C68700',
+        },
+        ember: '#2E9E3F',
       },
       fontFamily: {
         display: ['Anton', 'Archivo', 'system-ui', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'gold-gradient': 'linear-gradient(100deg, #FFC13B 0%, #F5A800 45%, #E8721C 100%)',
-        'ink-radial': 'radial-gradient(120% 120% at 50% 0%, #1E1E22 0%, #0B0B0C 70%)',
+        'gold-gradient': 'linear-gradient(100deg, #FFD35A 0%, #FDB913 50%, #F0A200 100%)',
+        'blue-gradient': 'linear-gradient(160deg, #20489F 0%, #102A66 100%)',
+        'ink-radial': 'radial-gradient(120% 120% at 50% 0%, #21489F 0%, #12306F 55%, #0E2352 100%)',
       },
       boxShadow: {
-        gold: '0 18px 45px -12px rgba(245, 168, 0, 0.55)',
-        card: '0 24px 60px -24px rgba(0, 0, 0, 0.35)',
+        gold: '0 18px 45px -12px rgba(253, 185, 19, 0.5)',
+        blue: '0 22px 55px -20px rgba(21, 58, 143, 0.45)',
+        card: '0 24px 60px -24px rgba(16, 34, 74, 0.22)',
       },
       keyframes: {
         flicker: {

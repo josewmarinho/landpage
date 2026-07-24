@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   html {
@@ -14,12 +14,12 @@
   }
 
   body {
-    @apply bg-ink text-white font-sans antialiased;
+    @apply bg-white text-ink font-sans antialiased;
   }
 
   ::selection {
-    background: #f5a800;
-    color: #0b0b0c;
+    background: #fdb913;
+    color: #0e1f45;
   }
 
   /* Scrollbar */
@@ -27,14 +27,14 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #0b0b0c;
+    background: #eef3fb;
   }
   ::-webkit-scrollbar-thumb {
-    background: #2a2a30;
+    background: #a9bce2;
     border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #f5a800;
+    background: #173a8f;
   }
 }
 
@@ -43,8 +43,17 @@
     @apply font-display uppercase leading-[0.92] tracking-[0.01em];
   }
 
+  /* Ênfase amarela — usar SOBRE fundo azul-marinho/escuro. */
   .text-gradient-gold {
     @apply bg-gold-gradient bg-clip-text text-transparent;
+  }
+
+  /* Ênfase sobre fundo claro. */
+  .text-em-green {
+    @apply text-green-600;
+  }
+  .text-em-blue {
+    @apply text-navy;
   }
 
   .section-pad {
@@ -56,7 +65,7 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-gold-400;
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-green-600;
   }
 }
 
