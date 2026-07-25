@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    background: #fdb913;
+    color: #0e1f45;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #eef3fb;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #a9bce2;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #173a8f;
+  }
+}
+
+@layer components {
+  .display {
+    @apply font-display uppercase leading-[0.92] tracking-[0.01em];
+  }
+
+  /* Ênfase amarela — usar SOBRE fundo azul-marinho/escuro. */
+  .text-gradient-gold {
+    @apply bg-gold-gradient bg-clip-text text-transparent;
+  }
+
+  /* Ênfase sobre fundo claro. */
+  .text-em-green {
+    @apply text-green-600;
+  }
+  .text-em-blue {
+    @apply text-navy;
+  }
+
+  .section-pad {
+    @apply px-5 py-20 sm:px-8 md:py-28 lg:px-12;
+  }
+
+  .container-x {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.28em] text-green-600;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Modo "flat": sem animações de entrada — conteúdo sempre visível.
+   Ativado para quem prefere menos movimento (via ?flat ou reduced-motion). */
+html[data-flat] * {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
